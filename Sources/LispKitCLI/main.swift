@@ -112,7 +112,7 @@ final class CLIApplication {
     print("Enter your Anthropic API key (input is hidden): ", terminator: "")
     fflush(stdout)
     
-      // Temporarily disable terminal echo so the key isn't visible
+    // Temporarily disable terminal echo so the key isn't visible
     var saved = termios()
     tcgetattr(STDIN_FILENO, &saved)
     var silent = saved

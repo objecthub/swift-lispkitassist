@@ -13,6 +13,21 @@
 		CC73EC112FA1115200C65813 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC73EC102FA1115200C65813 /* Security.framework */; };
 		CC73EC142FA1133800C65813 /* CommandLineKit in Frameworks */ = {isa = PBXBuildFile; productRef = CC73EC132FA1133800C65813 /* CommandLineKit */; };
 		CC73EC1B2FA1F24D00C65813 /* LispKitAssist.docc in Sources */ = {isa = PBXBuildFile; fileRef = CC73EC1A2FA1F24D00C65813 /* LispKitAssist.docc */; };
+		CC7CCAF02FA2AD5E00C05C77 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7CCAEE2FA2AD5E00C05C77 /* main.swift */; };
+		CC7CCAF12FA2AD5E00C05C77 /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7CCAED2FA2AD5E00C05C77 /* KeychainManager.swift */; };
+		CC7CCAF22FA2AD5E00C05C77 /* CLIPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7CCAEC2FA2AD5E00C05C77 /* CLIPresenter.swift */; };
+		CC7CCB042FA2ADA200C05C77 /* AnthropicClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7CCAF32FA2ADA200C05C77 /* AnthropicClient.swift */; };
+		CC7CCB052FA2ADA200C05C77 /* APIModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7CCAFA2FA2ADA200C05C77 /* APIModels.swift */; };
+		CC7CCB062FA2ADA200C05C77 /* AssistantTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7CCAFF2FA2ADA200C05C77 /* AssistantTool.swift */; };
+		CC7CCB072FA2ADA200C05C77 /* DocumentationTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7CCB002FA2ADA200C05C77 /* DocumentationTool.swift */; };
+		CC7CCB082FA2ADA200C05C77 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7CCAFB2FA2ADA200C05C77 /* Message.swift */; };
+		CC7CCB092FA2ADA200C05C77 /* SystemPromptBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7CCAFD2FA2ADA200C05C77 /* SystemPromptBuilder.swift */; };
+		CC7CCB0A2FA2ADA200C05C77 /* ToolRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7CCB012FA2ADA200C05C77 /* ToolRegistry.swift */; };
+		CC7CCB0B2FA2ADA200C05C77 /* StreamParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7CCAF42FA2ADA200C05C77 /* StreamParser.swift */; };
+		CC7CCB0C2FA2ADA200C05C77 /* AssistantEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7CCAF72FA2ADA200C05C77 /* AssistantEngine.swift */; };
+		CC7CCB0D2FA2ADA200C05C77 /* AssistantDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7CCAF62FA2ADA200C05C77 /* AssistantDelegate.swift */; };
+		CC7CCB0E2FA2ADA200C05C77 /* ConversationSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7CCAF82FA2ADA200C05C77 /* ConversationSession.swift */; };
+		CC7CCB112FA2ADD000C05C77 /* LispKitAssistTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7CCB0F2FA2ADD000C05C77 /* LispKitAssistTests.swift */; };
 		CC80AA192FA0B91400859B31 /* LispKitAssist.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC80AA0D2FA0B91400859B31 /* LispKitAssist.framework */; };
 /* End PBXBuildFile section */
 
@@ -139,30 +154,113 @@
 		CC73EC662FA1F36F00C65813 /* (lispkit url).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "(lispkit url).md"; sourceTree = "<group>"; };
 		CC73EC672FA1F36F00C65813 /* (lispkit vector).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "(lispkit vector).md"; sourceTree = "<group>"; };
 		CC73EC682FA1F36F00C65813 /* (lispkit vision).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "(lispkit vision).md"; sourceTree = "<group>"; };
+		CC7CCAEC2FA2AD5E00C05C77 /* CLIPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLIPresenter.swift; sourceTree = "<group>"; };
+		CC7CCAED2FA2AD5E00C05C77 /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
+		CC7CCAEE2FA2AD5E00C05C77 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		CC7CCAF32FA2ADA200C05C77 /* AnthropicClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnthropicClient.swift; sourceTree = "<group>"; };
+		CC7CCAF42FA2ADA200C05C77 /* StreamParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamParser.swift; sourceTree = "<group>"; };
+		CC7CCAF62FA2ADA200C05C77 /* AssistantDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssistantDelegate.swift; sourceTree = "<group>"; };
+		CC7CCAF72FA2ADA200C05C77 /* AssistantEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssistantEngine.swift; sourceTree = "<group>"; };
+		CC7CCAF82FA2ADA200C05C77 /* ConversationSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationSession.swift; sourceTree = "<group>"; };
+		CC7CCAFA2FA2ADA200C05C77 /* APIModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIModels.swift; sourceTree = "<group>"; };
+		CC7CCAFB2FA2ADA200C05C77 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		CC7CCAFD2FA2ADA200C05C77 /* SystemPromptBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemPromptBuilder.swift; sourceTree = "<group>"; };
+		CC7CCAFF2FA2ADA200C05C77 /* AssistantTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssistantTool.swift; sourceTree = "<group>"; };
+		CC7CCB002FA2ADA200C05C77 /* DocumentationTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentationTool.swift; sourceTree = "<group>"; };
+		CC7CCB012FA2ADA200C05C77 /* ToolRegistry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolRegistry.swift; sourceTree = "<group>"; };
+		CC7CCB0F2FA2ADD000C05C77 /* LispKitAssistTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LispKitAssistTests.swift; sourceTree = "<group>"; };
+		CC7CCB122FA2AE1400C05C77 /* avl-tree.scm */ = {isa = PBXFileReference; lastKnownFileType = text; path = "avl-tree.scm"; sourceTree = "<group>"; };
+		CC7CCB162FA2AE1400C05C77 /* patmatch.sld */ = {isa = PBXFileReference; lastKnownFileType = text; path = patmatch.sld; sourceTree = "<group>"; };
+		CC7CCB172FA2AE1400C05C77 /* simplifier.sld */ = {isa = PBXFileReference; lastKnownFileType = text; path = simplifier.sld; sourceTree = "<group>"; };
+		CC7CCB182FA2AE1400C05C77 /* util.sld */ = {isa = PBXFileReference; lastKnownFileType = text; path = util.sld; sourceTree = "<group>"; };
+		CC7CCB1A2FA2AE1400C05C77 /* Blockchain.scm */ = {isa = PBXFileReference; lastKnownFileType = text; path = Blockchain.scm; sourceTree = "<group>"; };
+		CC7CCB1B2FA2AE1400C05C77 /* Channels.scm */ = {isa = PBXFileReference; lastKnownFileType = text; path = Channels.scm; sourceTree = "<group>"; };
+		CC7CCB1C2FA2AE1400C05C77 /* Compiler.scm */ = {isa = PBXFileReference; lastKnownFileType = text; path = Compiler.scm; sourceTree = "<group>"; };
+		CC7CCB1D2FA2AE1400C05C77 /* Coroutines.scm */ = {isa = PBXFileReference; lastKnownFileType = text; path = Coroutines.scm; sourceTree = "<group>"; };
+		CC7CCB1E2FA2AE1400C05C77 /* Covid.scm */ = {isa = PBXFileReference; lastKnownFileType = text; path = Covid.scm; sourceTree = "<group>"; };
+		CC7CCB1F2FA2AE1400C05C77 /* DrawBarCharts.scm */ = {isa = PBXFileReference; lastKnownFileType = text; path = DrawBarCharts.scm; sourceTree = "<group>"; };
+		CC7CCB202FA2AE1400C05C77 /* DrawMaps.scm */ = {isa = PBXFileReference; lastKnownFileType = text; path = DrawMaps.scm; sourceTree = "<group>"; };
+		CC7CCB212FA2AE1400C05C77 /* DrawTrees.scm */ = {isa = PBXFileReference; lastKnownFileType = text; path = DrawTrees.scm; sourceTree = "<group>"; };
+		CC7CCB222FA2AE1400C05C77 /* EditDistance.scm */ = {isa = PBXFileReference; lastKnownFileType = text; path = EditDistance.scm; sourceTree = "<group>"; };
+		CC7CCB232FA2AE1400C05C77 /* EUStats.scm */ = {isa = PBXFileReference; lastKnownFileType = text; path = EUStats.scm; sourceTree = "<group>"; };
+		CC7CCB242FA2AE1400C05C77 /* HTTP.scm */ = {isa = PBXFileReference; lastKnownFileType = text; path = HTTP.scm; sourceTree = "<group>"; };
+		CC7CCB252FA2AE1400C05C77 /* ImageComposition.scm */ = {isa = PBXFileReference; lastKnownFileType = text; path = ImageComposition.scm; sourceTree = "<group>"; };
+		CC7CCB262FA2AE1400C05C77 /* JSON.scm */ = {isa = PBXFileReference; lastKnownFileType = text; path = JSON.scm; sourceTree = "<group>"; };
+		CC7CCB272FA2AE1400C05C77 /* Keychain.scm */ = {isa = PBXFileReference; lastKnownFileType = text; path = Keychain.scm; sourceTree = "<group>"; };
+		CC7CCB282FA2AE1400C05C77 /* Math.scm */ = {isa = PBXFileReference; lastKnownFileType = text; path = Math.scm; sourceTree = "<group>"; };
+		CC7CCB292FA2AE1400C05C77 /* Maze.scm */ = {isa = PBXFileReference; lastKnownFileType = text; path = Maze.scm; sourceTree = "<group>"; };
+		CC7CCB2A2FA2AE1400C05C77 /* MermaidDiagrams.scm */ = {isa = PBXFileReference; lastKnownFileType = text; path = MermaidDiagrams.scm; sourceTree = "<group>"; };
+		CC7CCB2B2FA2AE1400C05C77 /* ObjectOrientation.scm */ = {isa = PBXFileReference; lastKnownFileType = text; path = ObjectOrientation.scm; sourceTree = "<group>"; };
+		CC7CCB2C2FA2AE1400C05C77 /* OCR.scm */ = {isa = PBXFileReference; lastKnownFileType = text; path = OCR.scm; sourceTree = "<group>"; };
+		CC7CCB2D2FA2AE1400C05C77 /* PDF.scm */ = {isa = PBXFileReference; lastKnownFileType = text; path = PDF.scm; sourceTree = "<group>"; };
+		CC7CCB2E2FA2AE1400C05C77 /* Pi.scm */ = {isa = PBXFileReference; lastKnownFileType = text; path = Pi.scm; sourceTree = "<group>"; };
+		CC7CCB2F2FA2AE1400C05C77 /* Pinterest.scm */ = {isa = PBXFileReference; lastKnownFileType = text; path = Pinterest.scm; sourceTree = "<group>"; };
+		CC7CCB302FA2AE1400C05C77 /* Plot.scm */ = {isa = PBXFileReference; lastKnownFileType = text; path = Plot.scm; sourceTree = "<group>"; };
+		CC7CCB312FA2AE1400C05C77 /* Polynomials.scm */ = {isa = PBXFileReference; lastKnownFileType = text; path = Polynomials.scm; sourceTree = "<group>"; };
+		CC7CCB322FA2AE1400C05C77 /* Prolog.scm */ = {isa = PBXFileReference; lastKnownFileType = text; path = Prolog.scm; sourceTree = "<group>"; };
+		CC7CCB332FA2AE1400C05C77 /* Queens.scm */ = {isa = PBXFileReference; lastKnownFileType = text; path = Queens.scm; sourceTree = "<group>"; };
+		CC7CCB342FA2AE1400C05C77 /* Schelog.scm */ = {isa = PBXFileReference; lastKnownFileType = text; path = Schelog.scm; sourceTree = "<group>"; };
+		CC7CCB352FA2AE1400C05C77 /* Simplifier.scm */ = {isa = PBXFileReference; lastKnownFileType = text; path = Simplifier.scm; sourceTree = "<group>"; };
+		CC7CCB362FA2AE1400C05C77 /* SpellNumbers.scm */ = {isa = PBXFileReference; lastKnownFileType = text; path = SpellNumbers.scm; sourceTree = "<group>"; };
+		CC7CCB372FA2AE1400C05C77 /* Streams.scm */ = {isa = PBXFileReference; lastKnownFileType = text; path = Streams.scm; sourceTree = "<group>"; };
+		CC7CCB382FA2AE1400C05C77 /* StyledTextDoc.scm */ = {isa = PBXFileReference; lastKnownFileType = text; path = StyledTextDoc.scm; sourceTree = "<group>"; };
+		CC7CCB392FA2AE1400C05C77 /* Sudoku.scm */ = {isa = PBXFileReference; lastKnownFileType = text; path = Sudoku.scm; sourceTree = "<group>"; };
+		CC7CCB3A2FA2AE1400C05C77 /* Topological.scm */ = {isa = PBXFileReference; lastKnownFileType = text; path = Topological.scm; sourceTree = "<group>"; };
+		CC7CCB3B2FA2AE1400C05C77 /* Turtle.scm */ = {isa = PBXFileReference; lastKnownFileType = text; path = Turtle.scm; sourceTree = "<group>"; };
+		CC7CCB3C2FA2AE1400C05C77 /* VisualizePointSets.scm */ = {isa = PBXFileReference; lastKnownFileType = text; path = VisualizePointSets.scm; sourceTree = "<group>"; };
+		CC7CCB3D2FA2AE1400C05C77 /* WebAPIs.scm */ = {isa = PBXFileReference; lastKnownFileType = text; path = WebAPIs.scm; sourceTree = "<group>"; };
+		CC7CCB3E2FA2AE1400C05C77 /* Webserver.scm */ = {isa = PBXFileReference; lastKnownFileType = text; path = Webserver.scm; sourceTree = "<group>"; };
+		CC7CCB402FA2AE1400C05C77 /* All.scm */ = {isa = PBXFileReference; lastKnownFileType = text; path = All.scm; sourceTree = "<group>"; };
+		CC7CCB412FA2AE1400C05C77 /* Import.scm */ = {isa = PBXFileReference; lastKnownFileType = text; path = Import.scm; sourceTree = "<group>"; };
+		CC7CCB422FA2AE1400C05C77 /* LispKit-Channel.scm */ = {isa = PBXFileReference; lastKnownFileType = text; path = "LispKit-Channel.scm"; sourceTree = "<group>"; };
+		CC7CCB432FA2AE1400C05C77 /* LispKit-Control.scm */ = {isa = PBXFileReference; lastKnownFileType = text; path = "LispKit-Control.scm"; sourceTree = "<group>"; };
+		CC7CCB442FA2AE1400C05C77 /* LispKit-Enum.scm */ = {isa = PBXFileReference; lastKnownFileType = text; path = "LispKit-Enum.scm"; sourceTree = "<group>"; };
+		CC7CCB452FA2AE1400C05C77 /* LispKit-JSON-Schema.scm */ = {isa = PBXFileReference; lastKnownFileType = text; path = "LispKit-JSON-Schema.scm"; sourceTree = "<group>"; };
+		CC7CCB462FA2AE1400C05C77 /* LispKit-List-Set.scm */ = {isa = PBXFileReference; lastKnownFileType = text; path = "LispKit-List-Set.scm"; sourceTree = "<group>"; };
+		CC7CCB472FA2AE1400C05C77 /* LispKit-Match.scm */ = {isa = PBXFileReference; lastKnownFileType = text; path = "LispKit-Match.scm"; sourceTree = "<group>"; };
+		CC7CCB482FA2AE1400C05C77 /* LispKit-Record.scm */ = {isa = PBXFileReference; lastKnownFileType = text; path = "LispKit-Record.scm"; sourceTree = "<group>"; };
+		CC7CCB492FA2AE1400C05C77 /* LispKit-Shared-Queue.scm */ = {isa = PBXFileReference; lastKnownFileType = text; path = "LispKit-Shared-Queue.scm"; sourceTree = "<group>"; };
+		CC7CCB4A2FA2AE1400C05C77 /* LispKit-WT-Tree.scm */ = {isa = PBXFileReference; lastKnownFileType = text; path = "LispKit-WT-Tree.scm"; sourceTree = "<group>"; };
+		CC7CCB4B2FA2AE1400C05C77 /* R7RS.scm */ = {isa = PBXFileReference; lastKnownFileType = text; path = R7RS.scm; sourceTree = "<group>"; };
+		CC7CCB4C2FA2AE1400C05C77 /* SRFI-14.scm */ = {isa = PBXFileReference; lastKnownFileType = text; path = "SRFI-14.scm"; sourceTree = "<group>"; };
+		CC7CCB4D2FA2AE1400C05C77 /* SRFI-18.scm */ = {isa = PBXFileReference; lastKnownFileType = text; path = "SRFI-18.scm"; sourceTree = "<group>"; };
+		CC7CCB4E2FA2AE1400C05C77 /* SRFI-101.scm */ = {isa = PBXFileReference; lastKnownFileType = text; path = "SRFI-101.scm"; sourceTree = "<group>"; };
+		CC7CCB4F2FA2AE1400C05C77 /* SRFI-125.scm */ = {isa = PBXFileReference; lastKnownFileType = text; path = "SRFI-125.scm"; sourceTree = "<group>"; };
+		CC7CCB502FA2AE1400C05C77 /* SRFI-128.scm */ = {isa = PBXFileReference; lastKnownFileType = text; path = "SRFI-128.scm"; sourceTree = "<group>"; };
+		CC7CCB512FA2AE1400C05C77 /* SRFI-143.scm */ = {isa = PBXFileReference; lastKnownFileType = text; path = "SRFI-143.scm"; sourceTree = "<group>"; };
+		CC7CCB522FA2AE1400C05C77 /* SRFI-144.scm */ = {isa = PBXFileReference; lastKnownFileType = text; path = "SRFI-144.scm"; sourceTree = "<group>"; };
+		CC7CCB532FA2AE1400C05C77 /* SRFI-146.scm */ = {isa = PBXFileReference; lastKnownFileType = text; path = "SRFI-146.scm"; sourceTree = "<group>"; };
+		CC7CCB542FA2AE1400C05C77 /* SRFI-154.scm */ = {isa = PBXFileReference; lastKnownFileType = text; path = "SRFI-154.scm"; sourceTree = "<group>"; };
+		CC7CCB552FA2AE1400C05C77 /* SRFI-155.scm */ = {isa = PBXFileReference; lastKnownFileType = text; path = "SRFI-155.scm"; sourceTree = "<group>"; };
+		CC7CCB562FA2AE1400C05C77 /* SRFI-165.scm */ = {isa = PBXFileReference; lastKnownFileType = text; path = "SRFI-165.scm"; sourceTree = "<group>"; };
+		CC7CCB572FA2AE1400C05C77 /* SRFI-166.scm */ = {isa = PBXFileReference; lastKnownFileType = text; path = "SRFI-166.scm"; sourceTree = "<group>"; };
+		CC7CCB582FA2AE1400C05C77 /* SRFI-167.scm */ = {isa = PBXFileReference; lastKnownFileType = text; path = "SRFI-167.scm"; sourceTree = "<group>"; };
+		CC7CCB592FA2AE1400C05C77 /* SRFI-173.scm */ = {isa = PBXFileReference; lastKnownFileType = text; path = "SRFI-173.scm"; sourceTree = "<group>"; };
+		CC7CCB5A2FA2AE1400C05C77 /* SRFI-174.scm */ = {isa = PBXFileReference; lastKnownFileType = text; path = "SRFI-174.scm"; sourceTree = "<group>"; };
+		CC7CCB5B2FA2AE1400C05C77 /* SRFI-175.scm */ = {isa = PBXFileReference; lastKnownFileType = text; path = "SRFI-175.scm"; sourceTree = "<group>"; };
+		CC7CCB5C2FA2AE1400C05C77 /* SRFI-189.scm */ = {isa = PBXFileReference; lastKnownFileType = text; path = "SRFI-189.scm"; sourceTree = "<group>"; };
+		CC7CCB5D2FA2AE1400C05C77 /* SRFI-194.scm */ = {isa = PBXFileReference; lastKnownFileType = text; path = "SRFI-194.scm"; sourceTree = "<group>"; };
+		CC7CCB5E2FA2AE1400C05C77 /* SRFI-196.scm */ = {isa = PBXFileReference; lastKnownFileType = text; path = "SRFI-196.scm"; sourceTree = "<group>"; };
+		CC7CCB5F2FA2AE1400C05C77 /* SRFI-204.scm */ = {isa = PBXFileReference; lastKnownFileType = text; path = "SRFI-204.scm"; sourceTree = "<group>"; };
+		CC7CCB602FA2AE1400C05C77 /* SRFI-209.scm */ = {isa = PBXFileReference; lastKnownFileType = text; path = "SRFI-209.scm"; sourceTree = "<group>"; };
+		CC7CCB612FA2AE1400C05C77 /* SRFI-210.scm */ = {isa = PBXFileReference; lastKnownFileType = text; path = "SRFI-210.scm"; sourceTree = "<group>"; };
+		CC7CCB622FA2AE1400C05C77 /* SRFI-214.scm */ = {isa = PBXFileReference; lastKnownFileType = text; path = "SRFI-214.scm"; sourceTree = "<group>"; };
+		CC7CCB632FA2AE1400C05C77 /* SRFI-217.scm */ = {isa = PBXFileReference; lastKnownFileType = text; path = "SRFI-217.scm"; sourceTree = "<group>"; };
+		CC7CCB642FA2AE1400C05C77 /* SRFI-219.scm */ = {isa = PBXFileReference; lastKnownFileType = text; path = "SRFI-219.scm"; sourceTree = "<group>"; };
+		CC7CCB652FA2AE1400C05C77 /* SRFI-221.scm */ = {isa = PBXFileReference; lastKnownFileType = text; path = "SRFI-221.scm"; sourceTree = "<group>"; };
+		CC7CCB662FA2AE1400C05C77 /* SRFI-222.scm */ = {isa = PBXFileReference; lastKnownFileType = text; path = "SRFI-222.scm"; sourceTree = "<group>"; };
+		CC7CCB672FA2AE1400C05C77 /* SRFI-223.scm */ = {isa = PBXFileReference; lastKnownFileType = text; path = "SRFI-223.scm"; sourceTree = "<group>"; };
+		CC7CCB682FA2AE1400C05C77 /* SRFI-224.scm */ = {isa = PBXFileReference; lastKnownFileType = text; path = "SRFI-224.scm"; sourceTree = "<group>"; };
+		CC7CCB692FA2AE1400C05C77 /* SRFI-227.scm */ = {isa = PBXFileReference; lastKnownFileType = text; path = "SRFI-227.scm"; sourceTree = "<group>"; };
+		CC7CCB6A2FA2AE1400C05C77 /* SRFI-228.scm */ = {isa = PBXFileReference; lastKnownFileType = text; path = "SRFI-228.scm"; sourceTree = "<group>"; };
+		CC7CCB6B2FA2AE1400C05C77 /* SRFI-229.scm */ = {isa = PBXFileReference; lastKnownFileType = text; path = "SRFI-229.scm"; sourceTree = "<group>"; };
+		CC7CCB6C2FA2AE1400C05C77 /* SRFI-232.scm */ = {isa = PBXFileReference; lastKnownFileType = text; path = "SRFI-232.scm"; sourceTree = "<group>"; };
+		CC7CCB6D2FA2AE1400C05C77 /* SRFI-233.scm */ = {isa = PBXFileReference; lastKnownFileType = text; path = "SRFI-233.scm"; sourceTree = "<group>"; };
+		CC7CCB6E2FA2AE1400C05C77 /* SRFI-235.scm */ = {isa = PBXFileReference; lastKnownFileType = text; path = "SRFI-235.scm"; sourceTree = "<group>"; };
+		CC7CCB6F2FA2AE1400C05C77 /* SRFI-258.scm */ = {isa = PBXFileReference; lastKnownFileType = text; path = "SRFI-258.scm"; sourceTree = "<group>"; };
 		CC80AA0D2FA0B91400859B31 /* LispKitAssist.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LispKitAssist.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC80AA182FA0B91400859B31 /* LispKitAssistTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LispKitAssistTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		CC73EBFD2FA10C1700C65813 /* LispKitCLI */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			name = LispKitCLI;
-			path = Sources/LispKitCLI;
-			sourceTree = "<group>";
-		};
-		CC80AA0F2FA0B91400859B31 /* LispKitAssist */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			name = LispKitAssist;
-			path = Sources/LispKitAssist;
-			sourceTree = "<group>";
-		};
-		CC80AA1C2FA0B91400859B31 /* LispKitAssistTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			name = LispKitAssistTests;
-			path = Tests/LispKitAssistTests;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		CC73EBF92FA10C1700C65813 /* Frameworks */ = {
@@ -290,9 +388,233 @@
 		CC73EC6A2FA1F36F00C65813 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				CC7CCB712FA2AE1400C05C77 /* Examples */,
 				CC73EC692FA1F36F00C65813 /* Documentation */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		CC7CCAEF2FA2AD5E00C05C77 /* LispKitCLI */ = {
+			isa = PBXGroup;
+			children = (
+				CC7CCAEE2FA2AD5E00C05C77 /* main.swift */,
+				CC7CCAEC2FA2AD5E00C05C77 /* CLIPresenter.swift */,
+				CC7CCAED2FA2AD5E00C05C77 /* KeychainManager.swift */,
+			);
+			name = LispKitCLI;
+			path = Sources/LispKitCLI;
+			sourceTree = "<group>";
+		};
+		CC7CCAF52FA2ADA200C05C77 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				CC7CCAF32FA2ADA200C05C77 /* AnthropicClient.swift */,
+				CC7CCAF42FA2ADA200C05C77 /* StreamParser.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		CC7CCAF92FA2ADA200C05C77 /* Engine */ = {
+			isa = PBXGroup;
+			children = (
+				CC7CCAF62FA2ADA200C05C77 /* AssistantDelegate.swift */,
+				CC7CCAF72FA2ADA200C05C77 /* AssistantEngine.swift */,
+				CC7CCAF82FA2ADA200C05C77 /* ConversationSession.swift */,
+			);
+			path = Engine;
+			sourceTree = "<group>";
+		};
+		CC7CCAFC2FA2ADA200C05C77 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CC7CCAFA2FA2ADA200C05C77 /* APIModels.swift */,
+				CC7CCAFB2FA2ADA200C05C77 /* Message.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CC7CCAFE2FA2ADA200C05C77 /* Prompts */ = {
+			isa = PBXGroup;
+			children = (
+				CC7CCAFD2FA2ADA200C05C77 /* SystemPromptBuilder.swift */,
+			);
+			path = Prompts;
+			sourceTree = "<group>";
+		};
+		CC7CCB022FA2ADA200C05C77 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				CC7CCAFF2FA2ADA200C05C77 /* AssistantTool.swift */,
+				CC7CCB002FA2ADA200C05C77 /* DocumentationTool.swift */,
+				CC7CCB012FA2ADA200C05C77 /* ToolRegistry.swift */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		CC7CCB032FA2ADA200C05C77 /* LispKitAssist */ = {
+			isa = PBXGroup;
+			children = (
+				CC7CCAF52FA2ADA200C05C77 /* API */,
+				CC7CCAF92FA2ADA200C05C77 /* Engine */,
+				CC7CCAFC2FA2ADA200C05C77 /* Models */,
+				CC7CCAFE2FA2ADA200C05C77 /* Prompts */,
+				CC7CCB022FA2ADA200C05C77 /* Tools */,
+			);
+			name = LispKitAssist;
+			path = Sources/LispKitAssist;
+			sourceTree = "<group>";
+		};
+		CC7CCB102FA2ADD000C05C77 /* LispKitAssistTests */ = {
+			isa = PBXGroup;
+			children = (
+				CC7CCB0F2FA2ADD000C05C77 /* LispKitAssistTests.swift */,
+			);
+			name = LispKitAssistTests;
+			path = Tests/LispKitAssistTests;
+			sourceTree = "<group>";
+		};
+		CC7CCB132FA2AE1400C05C77 /* example */ = {
+			isa = PBXGroup;
+			children = (
+				CC7CCB122FA2AE1400C05C77 /* avl-tree.scm */,
+			);
+			path = example;
+			sourceTree = "<group>";
+		};
+		CC7CCB142FA2AE1400C05C77 /* lispkit */ = {
+			isa = PBXGroup;
+			children = (
+				CC7CCB132FA2AE1400C05C77 /* example */,
+			);
+			path = lispkit;
+			sourceTree = "<group>";
+		};
+		CC7CCB152FA2AE1400C05C77 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				CC7CCB142FA2AE1400C05C77 /* lispkit */,
+			);
+			path = Libraries;
+			sourceTree = "<group>";
+		};
+		CC7CCB192FA2AE1400C05C77 /* paip */ = {
+			isa = PBXGroup;
+			children = (
+				CC7CCB162FA2AE1400C05C77 /* patmatch.sld */,
+				CC7CCB172FA2AE1400C05C77 /* simplifier.sld */,
+				CC7CCB182FA2AE1400C05C77 /* util.sld */,
+			);
+			path = paip;
+			sourceTree = "<group>";
+		};
+		CC7CCB3F2FA2AE1400C05C77 /* Programs */ = {
+			isa = PBXGroup;
+			children = (
+				CC7CCB192FA2AE1400C05C77 /* paip */,
+				CC7CCB1A2FA2AE1400C05C77 /* Blockchain.scm */,
+				CC7CCB1B2FA2AE1400C05C77 /* Channels.scm */,
+				CC7CCB1C2FA2AE1400C05C77 /* Compiler.scm */,
+				CC7CCB1D2FA2AE1400C05C77 /* Coroutines.scm */,
+				CC7CCB1E2FA2AE1400C05C77 /* Covid.scm */,
+				CC7CCB1F2FA2AE1400C05C77 /* DrawBarCharts.scm */,
+				CC7CCB202FA2AE1400C05C77 /* DrawMaps.scm */,
+				CC7CCB212FA2AE1400C05C77 /* DrawTrees.scm */,
+				CC7CCB222FA2AE1400C05C77 /* EditDistance.scm */,
+				CC7CCB232FA2AE1400C05C77 /* EUStats.scm */,
+				CC7CCB242FA2AE1400C05C77 /* HTTP.scm */,
+				CC7CCB252FA2AE1400C05C77 /* ImageComposition.scm */,
+				CC7CCB262FA2AE1400C05C77 /* JSON.scm */,
+				CC7CCB272FA2AE1400C05C77 /* Keychain.scm */,
+				CC7CCB282FA2AE1400C05C77 /* Math.scm */,
+				CC7CCB292FA2AE1400C05C77 /* Maze.scm */,
+				CC7CCB2A2FA2AE1400C05C77 /* MermaidDiagrams.scm */,
+				CC7CCB2B2FA2AE1400C05C77 /* ObjectOrientation.scm */,
+				CC7CCB2C2FA2AE1400C05C77 /* OCR.scm */,
+				CC7CCB2D2FA2AE1400C05C77 /* PDF.scm */,
+				CC7CCB2E2FA2AE1400C05C77 /* Pi.scm */,
+				CC7CCB2F2FA2AE1400C05C77 /* Pinterest.scm */,
+				CC7CCB302FA2AE1400C05C77 /* Plot.scm */,
+				CC7CCB312FA2AE1400C05C77 /* Polynomials.scm */,
+				CC7CCB322FA2AE1400C05C77 /* Prolog.scm */,
+				CC7CCB332FA2AE1400C05C77 /* Queens.scm */,
+				CC7CCB342FA2AE1400C05C77 /* Schelog.scm */,
+				CC7CCB352FA2AE1400C05C77 /* Simplifier.scm */,
+				CC7CCB362FA2AE1400C05C77 /* SpellNumbers.scm */,
+				CC7CCB372FA2AE1400C05C77 /* Streams.scm */,
+				CC7CCB382FA2AE1400C05C77 /* StyledTextDoc.scm */,
+				CC7CCB392FA2AE1400C05C77 /* Sudoku.scm */,
+				CC7CCB3A2FA2AE1400C05C77 /* Topological.scm */,
+				CC7CCB3B2FA2AE1400C05C77 /* Turtle.scm */,
+				CC7CCB3C2FA2AE1400C05C77 /* VisualizePointSets.scm */,
+				CC7CCB3D2FA2AE1400C05C77 /* WebAPIs.scm */,
+				CC7CCB3E2FA2AE1400C05C77 /* Webserver.scm */,
+			);
+			path = Programs;
+			sourceTree = "<group>";
+		};
+		CC7CCB702FA2AE1400C05C77 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				CC7CCB402FA2AE1400C05C77 /* All.scm */,
+				CC7CCB412FA2AE1400C05C77 /* Import.scm */,
+				CC7CCB422FA2AE1400C05C77 /* LispKit-Channel.scm */,
+				CC7CCB432FA2AE1400C05C77 /* LispKit-Control.scm */,
+				CC7CCB442FA2AE1400C05C77 /* LispKit-Enum.scm */,
+				CC7CCB452FA2AE1400C05C77 /* LispKit-JSON-Schema.scm */,
+				CC7CCB462FA2AE1400C05C77 /* LispKit-List-Set.scm */,
+				CC7CCB472FA2AE1400C05C77 /* LispKit-Match.scm */,
+				CC7CCB482FA2AE1400C05C77 /* LispKit-Record.scm */,
+				CC7CCB492FA2AE1400C05C77 /* LispKit-Shared-Queue.scm */,
+				CC7CCB4A2FA2AE1400C05C77 /* LispKit-WT-Tree.scm */,
+				CC7CCB4B2FA2AE1400C05C77 /* R7RS.scm */,
+				CC7CCB4C2FA2AE1400C05C77 /* SRFI-14.scm */,
+				CC7CCB4D2FA2AE1400C05C77 /* SRFI-18.scm */,
+				CC7CCB4E2FA2AE1400C05C77 /* SRFI-101.scm */,
+				CC7CCB4F2FA2AE1400C05C77 /* SRFI-125.scm */,
+				CC7CCB502FA2AE1400C05C77 /* SRFI-128.scm */,
+				CC7CCB512FA2AE1400C05C77 /* SRFI-143.scm */,
+				CC7CCB522FA2AE1400C05C77 /* SRFI-144.scm */,
+				CC7CCB532FA2AE1400C05C77 /* SRFI-146.scm */,
+				CC7CCB542FA2AE1400C05C77 /* SRFI-154.scm */,
+				CC7CCB552FA2AE1400C05C77 /* SRFI-155.scm */,
+				CC7CCB562FA2AE1400C05C77 /* SRFI-165.scm */,
+				CC7CCB572FA2AE1400C05C77 /* SRFI-166.scm */,
+				CC7CCB582FA2AE1400C05C77 /* SRFI-167.scm */,
+				CC7CCB592FA2AE1400C05C77 /* SRFI-173.scm */,
+				CC7CCB5A2FA2AE1400C05C77 /* SRFI-174.scm */,
+				CC7CCB5B2FA2AE1400C05C77 /* SRFI-175.scm */,
+				CC7CCB5C2FA2AE1400C05C77 /* SRFI-189.scm */,
+				CC7CCB5D2FA2AE1400C05C77 /* SRFI-194.scm */,
+				CC7CCB5E2FA2AE1400C05C77 /* SRFI-196.scm */,
+				CC7CCB5F2FA2AE1400C05C77 /* SRFI-204.scm */,
+				CC7CCB602FA2AE1400C05C77 /* SRFI-209.scm */,
+				CC7CCB612FA2AE1400C05C77 /* SRFI-210.scm */,
+				CC7CCB622FA2AE1400C05C77 /* SRFI-214.scm */,
+				CC7CCB632FA2AE1400C05C77 /* SRFI-217.scm */,
+				CC7CCB642FA2AE1400C05C77 /* SRFI-219.scm */,
+				CC7CCB652FA2AE1400C05C77 /* SRFI-221.scm */,
+				CC7CCB662FA2AE1400C05C77 /* SRFI-222.scm */,
+				CC7CCB672FA2AE1400C05C77 /* SRFI-223.scm */,
+				CC7CCB682FA2AE1400C05C77 /* SRFI-224.scm */,
+				CC7CCB692FA2AE1400C05C77 /* SRFI-227.scm */,
+				CC7CCB6A2FA2AE1400C05C77 /* SRFI-228.scm */,
+				CC7CCB6B2FA2AE1400C05C77 /* SRFI-229.scm */,
+				CC7CCB6C2FA2AE1400C05C77 /* SRFI-232.scm */,
+				CC7CCB6D2FA2AE1400C05C77 /* SRFI-233.scm */,
+				CC7CCB6E2FA2AE1400C05C77 /* SRFI-235.scm */,
+				CC7CCB6F2FA2AE1400C05C77 /* SRFI-258.scm */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		CC7CCB712FA2AE1400C05C77 /* Examples */ = {
+			isa = PBXGroup;
+			children = (
+				CC7CCB152FA2AE1400C05C77 /* Libraries */,
+				CC7CCB3F2FA2AE1400C05C77 /* Programs */,
+				CC7CCB702FA2AE1400C05C77 /* Tests */,
+			);
+			path = Examples;
 			sourceTree = "<group>";
 		};
 		CC80AA032FA0B91400859B31 = {
@@ -300,10 +622,10 @@
 			children = (
 				CC73EC0D2FA10F4900C65813 /* Package.swift */,
 				CC73EC1A2FA1F24D00C65813 /* LispKitAssist.docc */,
-				CC80AA0F2FA0B91400859B31 /* LispKitAssist */,
+				CC7CCB032FA2ADA200C05C77 /* LispKitAssist */,
+				CC7CCB102FA2ADD000C05C77 /* LispKitAssistTests */,
+				CC7CCAEF2FA2AD5E00C05C77 /* LispKitCLI */,
 				CC73EC6A2FA1F36F00C65813 /* Resources */,
-				CC80AA1C2FA0B91400859B31 /* LispKitAssistTests */,
-				CC73EBFD2FA10C1700C65813 /* LispKitCLI */,
 				CC73EC072FA10E3800C65813 /* Frameworks */,
 				CC80AA0E2FA0B91400859B31 /* Products */,
 			);
@@ -346,9 +668,6 @@
 			dependencies = (
 				CC73EC0B2FA10E3800C65813 /* PBXTargetDependency */,
 			);
-			fileSystemSynchronizedGroups = (
-				CC73EBFD2FA10C1700C65813 /* LispKitCLI */,
-			);
 			name = LispKitCLI;
 			packageProductDependencies = (
 				CC73EC132FA1133800C65813 /* CommandLineKit */,
@@ -370,9 +689,6 @@
 			);
 			dependencies = (
 			);
-			fileSystemSynchronizedGroups = (
-				CC80AA0F2FA0B91400859B31 /* LispKitAssist */,
-			);
 			name = LispKitAssist;
 			packageProductDependencies = (
 				CC73EBF02FA0FFF700C65813 /* DynamicJSON */,
@@ -393,9 +709,6 @@
 			);
 			dependencies = (
 				CC80AA1B2FA0B91400859B31 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				CC80AA1C2FA0B91400859B31 /* LispKitAssistTests */,
 			);
 			name = LispKitAssistTests;
 			packageProductDependencies = (
@@ -472,6 +785,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC7CCAF02FA2AD5E00C05C77 /* main.swift in Sources */,
+				CC7CCAF12FA2AD5E00C05C77 /* KeychainManager.swift in Sources */,
+				CC7CCAF22FA2AD5E00C05C77 /* CLIPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -479,6 +795,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC7CCB042FA2ADA200C05C77 /* AnthropicClient.swift in Sources */,
+				CC7CCB052FA2ADA200C05C77 /* APIModels.swift in Sources */,
+				CC7CCB062FA2ADA200C05C77 /* AssistantTool.swift in Sources */,
+				CC7CCB072FA2ADA200C05C77 /* DocumentationTool.swift in Sources */,
+				CC7CCB082FA2ADA200C05C77 /* Message.swift in Sources */,
+				CC7CCB092FA2ADA200C05C77 /* SystemPromptBuilder.swift in Sources */,
+				CC7CCB0A2FA2ADA200C05C77 /* ToolRegistry.swift in Sources */,
+				CC7CCB0B2FA2ADA200C05C77 /* StreamParser.swift in Sources */,
+				CC7CCB0C2FA2ADA200C05C77 /* AssistantEngine.swift in Sources */,
+				CC7CCB0D2FA2ADA200C05C77 /* AssistantDelegate.swift in Sources */,
+				CC7CCB0E2FA2ADA200C05C77 /* ConversationSession.swift in Sources */,
 				CC73EC1B2FA1F24D00C65813 /* LispKitAssist.docc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -487,6 +814,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC7CCB112FA2ADD000C05C77 /* LispKitAssistTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
