@@ -55,11 +55,9 @@ public struct StreamParser {
     guard let base = try? decoder.decode(SSEBaseEvent.self, from: data) else {
       return nil
     }
-    
     switch base.type {
       case "ping":
         return .ping
-        
       case "content_block_start":
         guard let event = try? decoder.decode(SSEContentBlockStartEvent.self, from: data) else {
           return nil
@@ -68,9 +66,8 @@ public struct StreamParser {
         if block.type == "tool_use", let id = block.id, let name = block.name {
           return .toolUseStart(index: event.index, id: id, name: name)
         }
-          // text block start carries no useful incremental data
+        // text block start carries no useful incremental data
         return nil
-        
       case "content_block_delta":
         guard let event = try? decoder.decode(SSEContentBlockDeltaEvent.self, from: data) else {
           return nil
@@ -83,22 +80,18 @@ public struct StreamParser {
           default:
             return nil
         }
-        
       case "content_block_stop":
         guard let event = try? decoder.decode(SSEContentBlockStopEvent.self, from: data) else {
           return nil
         }
         return .contentBlockStop(index: event.index)
-        
       case "message_delta":
         guard let event = try? decoder.decode(SSEMessageDeltaEvent.self, from: data) else {
           return nil
         }
         return .messageDelta(stopReason: event.delta.stopReason)
-        
       case "message_stop":
         return .messageStop
-        
       default:
         return nil
     }

@@ -68,23 +68,19 @@ public final class AssistantEngine {
   
   private func runAgentLoop() async {
     delegate?.engineDidStartResponding()
-    
     do {
       while true {
-          // Accumulate one full assistant turn from the stream
+        // Accumulate one full assistant turn from the stream
         let turn = try await streamOneTurn()
-        
-          // Persist the assistant message
+        // Persist the assistant message
         session.append(turn.message)
-        
         if turn.stopReason == "tool_use", !turn.toolCalls.isEmpty {
-            // Execute every requested tool and collect results
+          // Execute every requested tool and collect results
           let resultItems = await executeToolCalls(turn.toolCalls)
-          
-            // Feed tool results back as a new user message and continue
+          // Feed tool results back as a new user message and continue
           session.append(Message(role: .user, content: resultItems))
         } else {
-            // The model is done; surface the final message
+          // The model is done; surface the final message
           delegate?.engineDidFinishResponding(message: turn.message)
           break
         }
@@ -106,53 +102,41 @@ public final class AssistantEngine {
       system:   systemPromptBuilder.build(),
       tools:    toolRegistry.apiTools
     )
-    
     var textBuffer = ""
     var toolAccumulators: [Int: ToolCallAccumulator] = [:]
     var stopReason: String?
-    
     for try await event in stream {
       switch event {
         case .textDelta(let token):
           textBuffer += token
           delegate?.engineDidReceiveToken(token)
-          
         case .toolUseStart(let index, let id, let name):
           toolAccumulators[index] = ToolCallAccumulator(index: index, id: id, name: name)
           delegate?.engineDidStartToolCall(id: id, name: name)
-          
         case .toolInputDelta(let index, let partialJson):
           toolAccumulators[index]?.inputJSON += partialJson
-          
         case .messageDelta(let reason):
           stopReason = reason
-          
         case .contentBlockStop, .messageStop, .ping:
           break
       }
     }
-    
     // Build content items
     var content: [ContentItem] = []
     if !textBuffer.isEmpty {
       content.append(.text(textBuffer))
     }
-    
     let completedToolCalls = toolAccumulators.values.sorted { $0.index < $1.index }
     for tc in completedToolCalls {
       let input = tc.parsedInput
       content.append(.toolUse(id: tc.id, name: tc.name, input: input))
     }
-    
     let message = Message(role: .assistant, content: content)
     return TurnResult(message: message, toolCalls: completedToolCalls, stopReason: stopReason)
   }
   
-  private func executeToolCalls(
-    _ calls: [ToolCallAccumulator]
-  ) async -> [ContentItem] {
+  private func executeToolCalls(_ calls: [ToolCallAccumulator]) async -> [ContentItem] {
     var results: [ContentItem] = []
-    
     for call in calls {
       do {
         let output = try await toolRegistry.execute(
@@ -164,7 +148,6 @@ public final class AssistantEngine {
           result: output, isError: false
         )
         results.append(.toolResult(toolUseId: call.id, content: output, isError: false))
-        
       } catch {
         let errMsg = error.localizedDescription
         delegate?.engineDidFinishToolCall(
@@ -174,7 +157,6 @@ public final class AssistantEngine {
         results.append(.toolResult(toolUseId: call.id, content: errMsg, isError: true))
       }
     }
-    
     return results
   }
 }
@@ -190,8 +172,9 @@ struct ToolCallAccumulator {
   var parsedInput: [String: JSON] {
     let raw = inputJSON.isEmpty ? "{}" : inputJSON
     guard let data   = raw.data(using: .utf8),
-          let parsed = try? JSONDecoder().decode([String: JSON].self, from: data)
-    else { return [:] }
+          let parsed = try? JSONDecoder().decode([String: JSON].self, from: data) else {
+      return [:]
+    }
     return parsed
   }
 }

@@ -420,6 +420,7 @@
 				CC7CCAF62FA2ADA200C05C77 /* AssistantDelegate.swift */,
 				CC7CCAF72FA2ADA200C05C77 /* AssistantEngine.swift */,
 				CC7CCAF82FA2ADA200C05C77 /* ConversationSession.swift */,
+				CC7CCAFD2FA2ADA200C05C77 /* SystemPromptBuilder.swift */,
 			);
 			path = Engine;
 			sourceTree = "<group>";
@@ -431,14 +432,6 @@
 				CC7CCAFB2FA2ADA200C05C77 /* Message.swift */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		CC7CCAFE2FA2ADA200C05C77 /* Prompts */ = {
-			isa = PBXGroup;
-			children = (
-				CC7CCAFD2FA2ADA200C05C77 /* SystemPromptBuilder.swift */,
-			);
-			path = Prompts;
 			sourceTree = "<group>";
 		};
 		CC7CCB022FA2ADA200C05C77 /* Tools */ = {
@@ -457,7 +450,6 @@
 				CC7CCAF52FA2ADA200C05C77 /* API */,
 				CC7CCAF92FA2ADA200C05C77 /* Engine */,
 				CC7CCAFC2FA2ADA200C05C77 /* Models */,
-				CC7CCAFE2FA2ADA200C05C77 /* Prompts */,
 				CC7CCB022FA2ADA200C05C77 /* Tools */,
 			);
 			name = LispKitAssist;

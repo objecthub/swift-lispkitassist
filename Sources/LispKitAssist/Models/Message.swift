@@ -42,6 +42,7 @@ public struct Message: Sendable {
   }
   
   public let role: Role
+  
   public let content: [ContentItem]
   
   public init(role: Role, content: [ContentItem]) {
@@ -51,17 +52,17 @@ public struct Message: Sendable {
   
   /// Create a plain user-text message.
   public static func user(_ text: String) -> Message {
-    Message(role: .user, content: [.text(text)])
+    return Message(role: .user, content: [.text(text)])
   }
   
   /// Create a plain assistant-text message.
   public static func assistant(_ text: String) -> Message {
-    Message(role: .assistant, content: [.text(text)])
+    return Message(role: .assistant, content: [.text(text)])
   }
   
   /// The concatenation of all `.text` content items.
   public var textContent: String {
-    content.compactMap {
+    return content.compactMap {
       if case .text(let t) = $0 { return t }
       return nil
     }.joined()

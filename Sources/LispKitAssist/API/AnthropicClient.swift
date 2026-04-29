@@ -79,16 +79,14 @@ public final class AnthropicClient: Sendable {
     self.urlSession = URLSession(configuration: sessionConfig)
   }
   
-    /// Open a streaming conversation request and yield decoded `StreamEvent` values.
-    /// The caller is responsible for building the full messages array including any
-    /// tool-result turns.
-    // Internal: takes wire-format types that are intentionally not public API.
-    // External callers go through AssistantEngine.sendMessage(_:).
-  func streamMessages(
-    messages: [APIMessage],
-    system: String?,
-    tools: [APITool] = []
-  ) -> AsyncThrowingStream<StreamEvent, Error> {
+  /// Open a streaming conversation request and yield decoded `StreamEvent` values.
+  /// The caller is responsible for building the full messages array including any
+  /// tool-result turns.
+  // Internal: takes wire-format types that are intentionally not public API.
+  // External callers go through AssistantEngine.sendMessage(_:).
+  func streamMessages(messages: [APIMessage],
+                      system: String?,
+                      tools: [APITool] = []) -> AsyncThrowingStream<StreamEvent, Error> {
     AsyncThrowingStream { continuation in
       Task {
         do {
@@ -97,13 +95,10 @@ public final class AnthropicClient: Sendable {
             system: system,
             tools: tools
           )
-          
           let (bytes, response) = try await self.urlSession.bytes(for: request)
-          
           guard let httpResponse = response as? HTTPURLResponse else {
             throw AnthropicError.networkError(URLError(.badServerResponse))
           }
-          
           guard (200..<300).contains(httpResponse.statusCode) else {
               // Collect the error body before throwing
             var errorBody = ""
@@ -115,8 +110,7 @@ public final class AnthropicClient: Sendable {
               body: errorBody
             )
           }
-          
-            // Parse SSE lines
+          // Parse SSE lines
           for try await line in bytes.lines {
             if line.hasPrefix("data: ") {
               let payload = String(line.dropFirst(6))
@@ -130,7 +124,6 @@ public final class AnthropicClient: Sendable {
               }
             }
           }
-          
           continuation.finish()
         } catch {
           continuation.finish(throwing: error)
@@ -139,24 +132,20 @@ public final class AnthropicClient: Sendable {
     }
   }
   
-  private func buildRequest(
-    messages: [APIMessage],
-    system: String?,
-    tools: [APITool]
-  ) throws -> URLRequest {
+  private func buildRequest(messages: [APIMessage],
+                            system: String?,
+                            tools: [APITool]) throws -> URLRequest {
     guard !configuration.apiKey.isEmpty else {
       throw AnthropicError.missingAPIKey
     }
     guard let url = URL(string: "\(configuration.baseURL)/v1/messages") else {
       throw AnthropicError.invalidURL
     }
-    
     var request = URLRequest(url: url)
     request.httpMethod = "POST"
     request.setValue("application/json", forHTTPHeaderField: "content-type")
     request.setValue(configuration.apiKey, forHTTPHeaderField: "x-api-key")
     request.setValue("2023-06-01", forHTTPHeaderField: "anthropic-version")
-    
     let body = MessageRequest(
       model:     configuration.model,
       maxTokens: configuration.maxTokens,
@@ -165,7 +154,6 @@ public final class AnthropicClient: Sendable {
       tools:     tools.isEmpty ? nil : tools,
       stream:    true
     )
-    
     let encoder = JSONEncoder()
     request.httpBody = try encoder.encode(body)
     return request

@@ -31,7 +31,11 @@ struct MessageRequest: Encodable {
   let stream: Bool
   
   enum CodingKeys: String, CodingKey {
-    case model, system, messages, tools, stream
+    case model
+    case system
+    case messages
+    case tools
+    case stream
     case maxTokens = "max_tokens"
   }
 }
@@ -49,9 +53,14 @@ enum APIContentBlock: Encodable {
   case toolResult(toolUseId: String, content: String, isError: Bool)
   
   private enum CodingKeys: String, CodingKey {
-    case type, text, id, name, input, content
+    case type
+    case text
+    case id
+    case name
+    case input
+    case content
     case toolUseId = "tool_use_id"
-    case isError   = "is_error"
+    case isError = "is_error"
   }
   
   func encode(to encoder: Encoder) throws {
@@ -59,20 +68,18 @@ enum APIContentBlock: Encodable {
     switch self {
       case .text(let text):
         try container.encode("text", forKey: .type)
-        try container.encode(text,   forKey: .text)
-        
+        try container.encode(text, forKey: .text)
       case .toolUse(let id, let name, let input):
         try container.encode("tool_use", forKey: .type)
-        try container.encode(id,          forKey: .id)
-        try container.encode(name,        forKey: .name)
-        try container.encode(input,       forKey: .input)
-        
+        try container.encode(id, forKey: .id)
+        try container.encode(name, forKey: .name)
+        try container.encode(input, forKey: .input)
       case .toolResult(let toolUseId, let content, let isError):
         try container.encode("tool_result", forKey: .type)
-        try container.encode(toolUseId,     forKey: .toolUseId)
-        try container.encode(content,       forKey: .content)
+        try container.encode(toolUseId, forKey: .toolUseId)
+        try container.encode(content, forKey: .content)
         if isError {
-          try container.encode(isError,   forKey: .isError)
+          try container.encode(isError, forKey: .isError)
         }
     }
   }
@@ -85,7 +92,8 @@ struct APITool: Encodable {
   let inputSchema: JSON
   
   enum CodingKeys: String, CodingKey {
-    case name, description
+    case name
+    case description
     case inputSchema = "input_schema"
   }
 }
@@ -123,7 +131,8 @@ struct SSEContentBlockDeltaEvent: Decodable {
     let partialJson: String?
     
     enum CodingKeys: String, CodingKey {
-      case type, text
+      case type
+      case text
       case partialJson = "partial_json"
     }
   }
