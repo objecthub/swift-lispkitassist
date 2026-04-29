@@ -1,0 +1,879 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CC73EBF12FA0FFF700C65813 /* DynamicJSON in Frameworks */ = {isa = PBXBuildFile; productRef = CC73EBF02FA0FFF700C65813 /* DynamicJSON */; };
+		CC73EC082FA10E3800C65813 /* LispKitAssist.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC80AA0D2FA0B91400859B31 /* LispKitAssist.framework */; };
+		CC73EC092FA10E3800C65813 /* LispKitAssist.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CC80AA0D2FA0B91400859B31 /* LispKitAssist.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CC73EC112FA1115200C65813 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC73EC102FA1115200C65813 /* Security.framework */; };
+		CC73EC142FA1133800C65813 /* CommandLineKit in Frameworks */ = {isa = PBXBuildFile; productRef = CC73EC132FA1133800C65813 /* CommandLineKit */; };
+		CC73EC1B2FA1F24D00C65813 /* LispKitAssist.docc in Sources */ = {isa = PBXBuildFile; fileRef = CC73EC1A2FA1F24D00C65813 /* LispKitAssist.docc */; };
+		CC80AA192FA0B91400859B31 /* LispKitAssist.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC80AA0D2FA0B91400859B31 /* LispKitAssist.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CC73EC0A2FA10E3800C65813 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CC80AA042FA0B91400859B31 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CC80AA0C2FA0B91400859B31;
+			remoteInfo = LispKitAssist;
+		};
+		CC80AA1A2FA0B91400859B31 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CC80AA042FA0B91400859B31 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CC80AA0C2FA0B91400859B31;
+			remoteInfo = LispKitAssist;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CC73EBFA2FA10C1700C65813 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		CC73EC0C2FA10E3800C65813 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				CC73EC092FA10E3800C65813 /* LispKitAssist.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		CC73EBFC2FA10C1700C65813 /* LispKitCLI */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LispKitCLI; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC73EC0D2FA10F4900C65813 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		CC73EC0E2FA110F900C65813 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		CC73EC102FA1115200C65813 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.4.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
+		CC73EC1A2FA1F24D00C65813 /* LispKitAssist.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; name = LispKitAssist.docc; path = Documentation/LispKitAssist.docc; sourceTree = "<group>"; };
+		CC73EC1C2FA1F36F00C65813 /* (lispkit archive tar).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "(lispkit archive tar).md"; sourceTree = "<group>"; };
+		CC73EC1D2FA1F36F00C65813 /* (lispkit archive zip).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "(lispkit archive zip).md"; sourceTree = "<group>"; };
+		CC73EC1E2FA1F36F00C65813 /* (lispkit base).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "(lispkit base).md"; sourceTree = "<group>"; };
+		CC73EC1F2FA1F36F00C65813 /* (lispkit bitset).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "(lispkit bitset).md"; sourceTree = "<group>"; };
+		CC73EC202FA1F36F00C65813 /* (lispkit box).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "(lispkit box).md"; sourceTree = "<group>"; };
+		CC73EC212FA1F36F00C65813 /* (lispkit bytevector).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "(lispkit bytevector).md"; sourceTree = "<group>"; };
+		CC73EC222FA1F36F00C65813 /* (lispkit char-set).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "(lispkit char-set).md"; sourceTree = "<group>"; };
+		CC73EC232FA1F36F00C65813 /* (lispkit char).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "(lispkit char).md"; sourceTree = "<group>"; };
+		CC73EC242FA1F36F00C65813 /* (lispkit combinator).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "(lispkit combinator).md"; sourceTree = "<group>"; };
+		CC73EC252FA1F36F00C65813 /* (lispkit comparator).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "(lispkit comparator).md"; sourceTree = "<group>"; };
+		CC73EC262FA1F36F00C65813 /* (lispkit control).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "(lispkit control).md"; sourceTree = "<group>"; };
+		CC73EC272FA1F36F00C65813 /* (lispkit core).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "(lispkit core).md"; sourceTree = "<group>"; };
+		CC73EC282FA1F36F00C65813 /* (lispkit crypto).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "(lispkit crypto).md"; sourceTree = "<group>"; };
+		CC73EC292FA1F36F00C65813 /* (lispkit csv).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "(lispkit csv).md"; sourceTree = "<group>"; };
+		CC73EC2A2FA1F36F00C65813 /* (lispkit datatype).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "(lispkit datatype).md"; sourceTree = "<group>"; };
+		CC73EC2B2FA1F36F00C65813 /* (lispkit date-time).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "(lispkit date-time).md"; sourceTree = "<group>"; };
+		CC73EC2C2FA1F36F00C65813 /* (lispkit debug).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "(lispkit debug).md"; sourceTree = "<group>"; };
+		CC73EC2D2FA1F36F00C65813 /* (lispkit disjoint-set).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "(lispkit disjoint-set).md"; sourceTree = "<group>"; };
+		CC73EC2E2FA1F36F00C65813 /* (lispkit draw barcode).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "(lispkit draw barcode).md"; sourceTree = "<group>"; };
+		CC73EC2F2FA1F36F00C65813 /* (lispkit draw chart bar).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "(lispkit draw chart bar).md"; sourceTree = "<group>"; };
+		CC73EC302FA1F36F00C65813 /* (lispkit draw map).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "(lispkit draw map).md"; sourceTree = "<group>"; };
+		CC73EC312FA1F36F00C65813 /* (lispkit draw turtle).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "(lispkit draw turtle).md"; sourceTree = "<group>"; };
+		CC73EC322FA1F36F00C65813 /* (lispkit draw web).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "(lispkit draw web).md"; sourceTree = "<group>"; };
+		CC73EC332FA1F36F00C65813 /* (lispkit draw).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "(lispkit draw).md"; sourceTree = "<group>"; };
+		CC73EC342FA1F36F00C65813 /* (lispkit dynamic).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "(lispkit dynamic).md"; sourceTree = "<group>"; };
+		CC73EC352FA1F36F00C65813 /* (lispkit enum).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "(lispkit enum).md"; sourceTree = "<group>"; };
+		CC73EC362FA1F36F00C65813 /* (lispkit format).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "(lispkit format).md"; sourceTree = "<group>"; };
+		CC73EC372FA1F36F00C65813 /* (lispkit graph).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "(lispkit graph).md"; sourceTree = "<group>"; };
+		CC73EC382FA1F36F00C65813 /* (lispkit gvector).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "(lispkit gvector).md"; sourceTree = "<group>"; };
+		CC73EC392FA1F36F00C65813 /* (lispkit hashtable).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "(lispkit hashtable).md"; sourceTree = "<group>"; };
+		CC73EC3A2FA1F36F00C65813 /* (lispkit heap).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "(lispkit heap).md"; sourceTree = "<group>"; };
+		CC73EC3B2FA1F36F00C65813 /* (lispkit http oauth).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "(lispkit http oauth).md"; sourceTree = "<group>"; };
+		CC73EC3C2FA1F36F00C65813 /* (lispkit http server).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "(lispkit http server).md"; sourceTree = "<group>"; };
+		CC73EC3D2FA1F36F00C65813 /* (lispkit http).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "(lispkit http).md"; sourceTree = "<group>"; };
+		CC73EC3E2FA1F36F00C65813 /* (lispkit image process).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "(lispkit image process).md"; sourceTree = "<group>"; };
+		CC73EC3F2FA1F36F00C65813 /* (lispkit image).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "(lispkit image).md"; sourceTree = "<group>"; };
+		CC73EC402FA1F36F00C65813 /* (lispkit iterate).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "(lispkit iterate).md"; sourceTree = "<group>"; };
+		CC73EC412FA1F36F00C65813 /* (lispkit json schema).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "(lispkit json schema).md"; sourceTree = "<group>"; };
+		CC73EC422FA1F36F00C65813 /* (lispkit json).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "(lispkit json).md"; sourceTree = "<group>"; };
+		CC73EC432FA1F36F00C65813 /* (lispkit list set).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "(lispkit list set).md"; sourceTree = "<group>"; };
+		CC73EC442FA1F36F00C65813 /* (lispkit list).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "(lispkit list).md"; sourceTree = "<group>"; };
+		CC73EC452FA1F36F00C65813 /* (lispkit location).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "(lispkit location).md"; sourceTree = "<group>"; };
+		CC73EC462FA1F36F00C65813 /* (lispkit log).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "(lispkit log).md"; sourceTree = "<group>"; };
+		CC73EC472FA1F36F00C65813 /* (lispkit markdown).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "(lispkit markdown).md"; sourceTree = "<group>"; };
+		CC73EC482FA1F36F00C65813 /* (lispkit match).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "(lispkit match).md"; sourceTree = "<group>"; };
+		CC73EC492FA1F36F00C65813 /* (lispkit math matrix).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "(lispkit math matrix).md"; sourceTree = "<group>"; };
+		CC73EC4A2FA1F36F00C65813 /* (lispkit math stats).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "(lispkit math stats).md"; sourceTree = "<group>"; };
+		CC73EC4B2FA1F36F00C65813 /* (lispkit math util).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "(lispkit math util).md"; sourceTree = "<group>"; };
+		CC73EC4C2FA1F36F00C65813 /* (lispkit math).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "(lispkit math).md"; sourceTree = "<group>"; };
+		CC73EC4D2FA1F36F00C65813 /* (lispkit object).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "(lispkit object).md"; sourceTree = "<group>"; };
+		CC73EC4E2FA1F36F00C65813 /* (lispkit pdf).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "(lispkit pdf).md"; sourceTree = "<group>"; };
+		CC73EC4F2FA1F36F00C65813 /* (lispkit port).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "(lispkit port).md"; sourceTree = "<group>"; };
+		CC73EC502FA1F36F00C65813 /* (lispkit prolog).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "(lispkit prolog).md"; sourceTree = "<group>"; };
+		CC73EC512FA1F36F00C65813 /* (lispkit queue).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "(lispkit queue).md"; sourceTree = "<group>"; };
+		CC73EC522FA1F36F00C65813 /* (lispkit record).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "(lispkit record).md"; sourceTree = "<group>"; };
+		CC73EC532FA1F36F00C65813 /* (lispkit regexp).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "(lispkit regexp).md"; sourceTree = "<group>"; };
+		CC73EC542FA1F36F00C65813 /* (lispkit serialize).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "(lispkit serialize).md"; sourceTree = "<group>"; };
+		CC73EC552FA1F36F00C65813 /* (lispkit set).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "(lispkit set).md"; sourceTree = "<group>"; };
+		CC73EC562FA1F36F00C65813 /* (lispkit sqlite).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "(lispkit sqlite).md"; sourceTree = "<group>"; };
+		CC73EC572FA1F36F00C65813 /* (lispkit stack).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "(lispkit stack).md"; sourceTree = "<group>"; };
+		CC73EC582FA1F36F00C65813 /* (lispkit stream).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "(lispkit stream).md"; sourceTree = "<group>"; };
+		CC73EC592FA1F36F00C65813 /* (lispkit string).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "(lispkit string).md"; sourceTree = "<group>"; };
+		CC73EC5A2FA1F36F00C65813 /* (lispkit styled-text).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "(lispkit styled-text).md"; sourceTree = "<group>"; };
+		CC73EC5B2FA1F36F00C65813 /* (lispkit system call).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "(lispkit system call).md"; sourceTree = "<group>"; };
+		CC73EC5C2FA1F36F00C65813 /* (lispkit system keychain).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "(lispkit system keychain).md"; sourceTree = "<group>"; };
+		CC73EC5D2FA1F36F00C65813 /* (lispkit system pasteboard).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "(lispkit system pasteboard).md"; sourceTree = "<group>"; };
+		CC73EC5E2FA1F36F00C65813 /* (lispkit system).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "(lispkit system).md"; sourceTree = "<group>"; };
+		CC73EC5F2FA1F36F00C65813 /* (lispkit test).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "(lispkit test).md"; sourceTree = "<group>"; };
+		CC73EC602FA1F36F00C65813 /* (lispkit text-table).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "(lispkit text-table).md"; sourceTree = "<group>"; };
+		CC73EC612FA1F36F00C65813 /* (lispkit thread channel).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "(lispkit thread channel).md"; sourceTree = "<group>"; };
+		CC73EC622FA1F36F00C65813 /* (lispkit thread future).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "(lispkit thread future).md"; sourceTree = "<group>"; };
+		CC73EC632FA1F36F00C65813 /* (lispkit thread shared-queue).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "(lispkit thread shared-queue).md"; sourceTree = "<group>"; };
+		CC73EC642FA1F36F00C65813 /* (lispkit thread).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "(lispkit thread).md"; sourceTree = "<group>"; };
+		CC73EC652FA1F36F00C65813 /* (lispkit type).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "(lispkit type).md"; sourceTree = "<group>"; };
+		CC73EC662FA1F36F00C65813 /* (lispkit url).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "(lispkit url).md"; sourceTree = "<group>"; };
+		CC73EC672FA1F36F00C65813 /* (lispkit vector).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "(lispkit vector).md"; sourceTree = "<group>"; };
+		CC73EC682FA1F36F00C65813 /* (lispkit vision).md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "(lispkit vision).md"; sourceTree = "<group>"; };
+		CC80AA0D2FA0B91400859B31 /* LispKitAssist.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LispKitAssist.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC80AA182FA0B91400859B31 /* LispKitAssistTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LispKitAssistTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		CC73EBFD2FA10C1700C65813 /* LispKitCLI */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			name = LispKitCLI;
+			path = Sources/LispKitCLI;
+			sourceTree = "<group>";
+		};
+		CC80AA0F2FA0B91400859B31 /* LispKitAssist */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			name = LispKitAssist;
+			path = Sources/LispKitAssist;
+			sourceTree = "<group>";
+		};
+		CC80AA1C2FA0B91400859B31 /* LispKitAssistTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			name = LispKitAssistTests;
+			path = Tests/LispKitAssistTests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CC73EBF92FA10C1700C65813 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC73EC082FA10E3800C65813 /* LispKitAssist.framework in Frameworks */,
+				CC73EC142FA1133800C65813 /* CommandLineKit in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC80AA0A2FA0B91400859B31 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC73EC112FA1115200C65813 /* Security.framework in Frameworks */,
+				CC73EBF12FA0FFF700C65813 /* DynamicJSON in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC80AA152FA0B91400859B31 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC80AA192FA0B91400859B31 /* LispKitAssist.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CC73EC072FA10E3800C65813 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CC73EC102FA1115200C65813 /* Security.framework */,
+				CC73EC0E2FA110F900C65813 /* Security.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CC73EC692FA1F36F00C65813 /* Documentation */ = {
+			isa = PBXGroup;
+			children = (
+				CC73EC1C2FA1F36F00C65813 /* (lispkit archive tar).md */,
+				CC73EC1D2FA1F36F00C65813 /* (lispkit archive zip).md */,
+				CC73EC1E2FA1F36F00C65813 /* (lispkit base).md */,
+				CC73EC1F2FA1F36F00C65813 /* (lispkit bitset).md */,
+				CC73EC202FA1F36F00C65813 /* (lispkit box).md */,
+				CC73EC212FA1F36F00C65813 /* (lispkit bytevector).md */,
+				CC73EC222FA1F36F00C65813 /* (lispkit char-set).md */,
+				CC73EC232FA1F36F00C65813 /* (lispkit char).md */,
+				CC73EC242FA1F36F00C65813 /* (lispkit combinator).md */,
+				CC73EC252FA1F36F00C65813 /* (lispkit comparator).md */,
+				CC73EC262FA1F36F00C65813 /* (lispkit control).md */,
+				CC73EC272FA1F36F00C65813 /* (lispkit core).md */,
+				CC73EC282FA1F36F00C65813 /* (lispkit crypto).md */,
+				CC73EC292FA1F36F00C65813 /* (lispkit csv).md */,
+				CC73EC2A2FA1F36F00C65813 /* (lispkit datatype).md */,
+				CC73EC2B2FA1F36F00C65813 /* (lispkit date-time).md */,
+				CC73EC2C2FA1F36F00C65813 /* (lispkit debug).md */,
+				CC73EC2D2FA1F36F00C65813 /* (lispkit disjoint-set).md */,
+				CC73EC2E2FA1F36F00C65813 /* (lispkit draw barcode).md */,
+				CC73EC2F2FA1F36F00C65813 /* (lispkit draw chart bar).md */,
+				CC73EC302FA1F36F00C65813 /* (lispkit draw map).md */,
+				CC73EC312FA1F36F00C65813 /* (lispkit draw turtle).md */,
+				CC73EC322FA1F36F00C65813 /* (lispkit draw web).md */,
+				CC73EC332FA1F36F00C65813 /* (lispkit draw).md */,
+				CC73EC342FA1F36F00C65813 /* (lispkit dynamic).md */,
+				CC73EC352FA1F36F00C65813 /* (lispkit enum).md */,
+				CC73EC362FA1F36F00C65813 /* (lispkit format).md */,
+				CC73EC372FA1F36F00C65813 /* (lispkit graph).md */,
+				CC73EC382FA1F36F00C65813 /* (lispkit gvector).md */,
+				CC73EC392FA1F36F00C65813 /* (lispkit hashtable).md */,
+				CC73EC3A2FA1F36F00C65813 /* (lispkit heap).md */,
+				CC73EC3B2FA1F36F00C65813 /* (lispkit http oauth).md */,
+				CC73EC3C2FA1F36F00C65813 /* (lispkit http server).md */,
+				CC73EC3D2FA1F36F00C65813 /* (lispkit http).md */,
+				CC73EC3E2FA1F36F00C65813 /* (lispkit image process).md */,
+				CC73EC3F2FA1F36F00C65813 /* (lispkit image).md */,
+				CC73EC402FA1F36F00C65813 /* (lispkit iterate).md */,
+				CC73EC412FA1F36F00C65813 /* (lispkit json schema).md */,
+				CC73EC422FA1F36F00C65813 /* (lispkit json).md */,
+				CC73EC432FA1F36F00C65813 /* (lispkit list set).md */,
+				CC73EC442FA1F36F00C65813 /* (lispkit list).md */,
+				CC73EC452FA1F36F00C65813 /* (lispkit location).md */,
+				CC73EC462FA1F36F00C65813 /* (lispkit log).md */,
+				CC73EC472FA1F36F00C65813 /* (lispkit markdown).md */,
+				CC73EC482FA1F36F00C65813 /* (lispkit match).md */,
+				CC73EC492FA1F36F00C65813 /* (lispkit math matrix).md */,
+				CC73EC4A2FA1F36F00C65813 /* (lispkit math stats).md */,
+				CC73EC4B2FA1F36F00C65813 /* (lispkit math util).md */,
+				CC73EC4C2FA1F36F00C65813 /* (lispkit math).md */,
+				CC73EC4D2FA1F36F00C65813 /* (lispkit object).md */,
+				CC73EC4E2FA1F36F00C65813 /* (lispkit pdf).md */,
+				CC73EC4F2FA1F36F00C65813 /* (lispkit port).md */,
+				CC73EC502FA1F36F00C65813 /* (lispkit prolog).md */,
+				CC73EC512FA1F36F00C65813 /* (lispkit queue).md */,
+				CC73EC522FA1F36F00C65813 /* (lispkit record).md */,
+				CC73EC532FA1F36F00C65813 /* (lispkit regexp).md */,
+				CC73EC542FA1F36F00C65813 /* (lispkit serialize).md */,
+				CC73EC552FA1F36F00C65813 /* (lispkit set).md */,
+				CC73EC562FA1F36F00C65813 /* (lispkit sqlite).md */,
+				CC73EC572FA1F36F00C65813 /* (lispkit stack).md */,
+				CC73EC582FA1F36F00C65813 /* (lispkit stream).md */,
+				CC73EC592FA1F36F00C65813 /* (lispkit string).md */,
+				CC73EC5A2FA1F36F00C65813 /* (lispkit styled-text).md */,
+				CC73EC5B2FA1F36F00C65813 /* (lispkit system call).md */,
+				CC73EC5C2FA1F36F00C65813 /* (lispkit system keychain).md */,
+				CC73EC5D2FA1F36F00C65813 /* (lispkit system pasteboard).md */,
+				CC73EC5E2FA1F36F00C65813 /* (lispkit system).md */,
+				CC73EC5F2FA1F36F00C65813 /* (lispkit test).md */,
+				CC73EC602FA1F36F00C65813 /* (lispkit text-table).md */,
+				CC73EC612FA1F36F00C65813 /* (lispkit thread channel).md */,
+				CC73EC622FA1F36F00C65813 /* (lispkit thread future).md */,
+				CC73EC632FA1F36F00C65813 /* (lispkit thread shared-queue).md */,
+				CC73EC642FA1F36F00C65813 /* (lispkit thread).md */,
+				CC73EC652FA1F36F00C65813 /* (lispkit type).md */,
+				CC73EC662FA1F36F00C65813 /* (lispkit url).md */,
+				CC73EC672FA1F36F00C65813 /* (lispkit vector).md */,
+				CC73EC682FA1F36F00C65813 /* (lispkit vision).md */,
+			);
+			path = Documentation;
+			sourceTree = "<group>";
+		};
+		CC73EC6A2FA1F36F00C65813 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CC73EC692FA1F36F00C65813 /* Documentation */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		CC80AA032FA0B91400859B31 = {
+			isa = PBXGroup;
+			children = (
+				CC73EC0D2FA10F4900C65813 /* Package.swift */,
+				CC73EC1A2FA1F24D00C65813 /* LispKitAssist.docc */,
+				CC80AA0F2FA0B91400859B31 /* LispKitAssist */,
+				CC73EC6A2FA1F36F00C65813 /* Resources */,
+				CC80AA1C2FA0B91400859B31 /* LispKitAssistTests */,
+				CC73EBFD2FA10C1700C65813 /* LispKitCLI */,
+				CC73EC072FA10E3800C65813 /* Frameworks */,
+				CC80AA0E2FA0B91400859B31 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CC80AA0E2FA0B91400859B31 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CC80AA0D2FA0B91400859B31 /* LispKitAssist.framework */,
+				CC80AA182FA0B91400859B31 /* LispKitAssistTests.xctest */,
+				CC73EBFC2FA10C1700C65813 /* LispKitCLI */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		CC80AA082FA0B91400859B31 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		CC73EBFB2FA10C1700C65813 /* LispKitCLI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC73EC002FA10C1700C65813 /* Build configuration list for PBXNativeTarget "LispKitCLI" */;
+			buildPhases = (
+				CC73EBF82FA10C1700C65813 /* Sources */,
+				CC73EBF92FA10C1700C65813 /* Frameworks */,
+				CC73EBFA2FA10C1700C65813 /* CopyFiles */,
+				CC73EC0C2FA10E3800C65813 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CC73EC0B2FA10E3800C65813 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				CC73EBFD2FA10C1700C65813 /* LispKitCLI */,
+			);
+			name = LispKitCLI;
+			packageProductDependencies = (
+				CC73EC132FA1133800C65813 /* CommandLineKit */,
+			);
+			productName = LispKitCLI;
+			productReference = CC73EBFC2FA10C1700C65813 /* LispKitCLI */;
+			productType = "com.apple.product-type.tool";
+		};
+		CC80AA0C2FA0B91400859B31 /* LispKitAssist */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC80AA212FA0B91400859B31 /* Build configuration list for PBXNativeTarget "LispKitAssist" */;
+			buildPhases = (
+				CC80AA082FA0B91400859B31 /* Headers */,
+				CC80AA092FA0B91400859B31 /* Sources */,
+				CC80AA0A2FA0B91400859B31 /* Frameworks */,
+				CC80AA0B2FA0B91400859B31 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				CC80AA0F2FA0B91400859B31 /* LispKitAssist */,
+			);
+			name = LispKitAssist;
+			packageProductDependencies = (
+				CC73EBF02FA0FFF700C65813 /* DynamicJSON */,
+			);
+			productName = LispKitAssist;
+			productReference = CC80AA0D2FA0B91400859B31 /* LispKitAssist.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		CC80AA172FA0B91400859B31 /* LispKitAssistTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC80AA242FA0B91400859B31 /* Build configuration list for PBXNativeTarget "LispKitAssistTests" */;
+			buildPhases = (
+				CC80AA142FA0B91400859B31 /* Sources */,
+				CC80AA152FA0B91400859B31 /* Frameworks */,
+				CC80AA162FA0B91400859B31 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CC80AA1B2FA0B91400859B31 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				CC80AA1C2FA0B91400859B31 /* LispKitAssistTests */,
+			);
+			name = LispKitAssistTests;
+			packageProductDependencies = (
+			);
+			productName = LispKitAssistTests;
+			productReference = CC80AA182FA0B91400859B31 /* LispKitAssistTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CC80AA042FA0B91400859B31 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2640;
+				LastUpgradeCheck = 2640;
+				TargetAttributes = {
+					CC73EBFB2FA10C1700C65813 = {
+						CreatedOnToolsVersion = 26.4.1;
+					};
+					CC80AA0C2FA0B91400859B31 = {
+						CreatedOnToolsVersion = 26.4.1;
+					};
+					CC80AA172FA0B91400859B31 = {
+						CreatedOnToolsVersion = 26.4.1;
+					};
+				};
+			};
+			buildConfigurationList = CC80AA072FA0B91400859B31 /* Build configuration list for PBXProject "LispKitAssist" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CC80AA032FA0B91400859B31;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				CC73EBEF2FA0FFF700C65813 /* XCRemoteSwiftPackageReference "swift-dynamicjson" */,
+				CC73EC122FA1133800C65813 /* XCRemoteSwiftPackageReference "swift-commandlinekit" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = CC80AA0E2FA0B91400859B31 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CC80AA0C2FA0B91400859B31 /* LispKitAssist */,
+				CC73EBFB2FA10C1700C65813 /* LispKitCLI */,
+				CC80AA172FA0B91400859B31 /* LispKitAssistTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CC80AA0B2FA0B91400859B31 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC80AA162FA0B91400859B31 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CC73EBF82FA10C1700C65813 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC80AA092FA0B91400859B31 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC73EC1B2FA1F24D00C65813 /* LispKitAssist.docc in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC80AA142FA0B91400859B31 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CC73EC0B2FA10E3800C65813 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CC80AA0C2FA0B91400859B31 /* LispKitAssist */;
+			targetProxy = CC73EC0A2FA10E3800C65813 /* PBXContainerItemProxy */;
+		};
+		CC80AA1B2FA0B91400859B31 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CC80AA0C2FA0B91400859B31 /* LispKitAssist */;
+			targetProxy = CC80AA1A2FA0B91400859B31 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		CC73EC012FA10C1700C65813 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C72Z63N8M5;
+				ENABLE_HARDENED_RUNTIME = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		CC73EC022FA10C1700C65813 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C72Z63N8M5;
+				ENABLE_HARDENED_RUNTIME = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		CC80AA1F2FA0B91400859B31 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = C72Z63N8M5;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		CC80AA202FA0B91400859B31 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = C72Z63N8M5;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		CC80AA222FA0B91400859B31 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALLOW_TARGET_PLATFORM_SPECIALIZATION = YES;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = NO;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = C72Z63N8M5;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = (
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.5;
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = net.objecthub.LispKitAssist;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = auto;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_INSTALL_MODULE = YES;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				XROS_DEPLOYMENT_TARGET = 26.4;
+			};
+			name = Debug;
+		};
+		CC80AA232FA0B91400859B31 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALLOW_TARGET_PLATFORM_SPECIALIZATION = YES;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = NO;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = C72Z63N8M5;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = (
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.5;
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = net.objecthub.LispKitAssist;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = auto;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_INSTALL_MODULE = YES;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				XROS_DEPLOYMENT_TARGET = 26.4;
+			};
+			name = Release;
+		};
+		CC80AA252FA0B91400859B31 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALLOW_TARGET_PLATFORM_SPECIALIZATION = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = C72Z63N8M5;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
+				MACOSX_DEPLOYMENT_TARGET = 13.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = net.objecthub.LispKitAssistTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				XROS_DEPLOYMENT_TARGET = 26.4;
+			};
+			name = Debug;
+		};
+		CC80AA262FA0B91400859B31 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALLOW_TARGET_PLATFORM_SPECIALIZATION = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = C72Z63N8M5;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
+				MACOSX_DEPLOYMENT_TARGET = 13.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = net.objecthub.LispKitAssistTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				XROS_DEPLOYMENT_TARGET = 26.4;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CC73EC002FA10C1700C65813 /* Build configuration list for PBXNativeTarget "LispKitCLI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC73EC012FA10C1700C65813 /* Debug */,
+				CC73EC022FA10C1700C65813 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CC80AA072FA0B91400859B31 /* Build configuration list for PBXProject "LispKitAssist" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC80AA1F2FA0B91400859B31 /* Debug */,
+				CC80AA202FA0B91400859B31 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CC80AA212FA0B91400859B31 /* Build configuration list for PBXNativeTarget "LispKitAssist" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC80AA222FA0B91400859B31 /* Debug */,
+				CC80AA232FA0B91400859B31 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CC80AA242FA0B91400859B31 /* Build configuration list for PBXNativeTarget "LispKitAssistTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC80AA252FA0B91400859B31 /* Debug */,
+				CC80AA262FA0B91400859B31 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CC73EBEF2FA0FFF700C65813 /* XCRemoteSwiftPackageReference "swift-dynamicjson" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/objecthub/swift-dynamicjson";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		CC73EC122FA1133800C65813 /* XCRemoteSwiftPackageReference "swift-commandlinekit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/objecthub/swift-commandlinekit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CC73EBF02FA0FFF700C65813 /* DynamicJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CC73EBEF2FA0FFF700C65813 /* XCRemoteSwiftPackageReference "swift-dynamicjson" */;
+			productName = DynamicJSON;
+		};
+		CC73EC132FA1133800C65813 /* CommandLineKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CC73EC122FA1133800C65813 /* XCRemoteSwiftPackageReference "swift-commandlinekit" */;
+			productName = CommandLineKit;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = CC80AA042FA0B91400859B31 /* Project object */;
+}

@@ -1,0 +1,23 @@
+{
+  "pins" : [
+    {
+      "identity" : "swift-commandlinekit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/objecthub/swift-commandlinekit.git",
+      "state" : {
+        "revision" : "9e7654dc2d5b475b82f0a7b375ed9108876dbb5f",
+        "version" : "1.0.0"
+      }
+    },
+    {
+      "identity" : "swift-dynamicjson",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/objecthub/swift-dynamicjson.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "9648f32126ade414b00b9551c27870d4ad9b168c"
+      }
+    }
+  ],
+  "version" : 2
+}
