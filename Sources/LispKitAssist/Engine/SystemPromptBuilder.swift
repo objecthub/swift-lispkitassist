@@ -63,7 +63,9 @@ public final class SystemPromptBuilder {
         
         ## Your capabilities
         
-        - Write correct, idiomatic LispKit Scheme code for any task.
+        - Write correct, idiomatic LispKit Scheme code for any task. Real-world example \
+          programs, idiomatic patterns, and practical library usage can be found with tool \
+          `search_example_code`.
         - Debug Scheme programs and explain error messages clearly.
         - Convert algorithms from Python, JavaScript, or other languages into \
           idiomatic Scheme.
@@ -82,13 +84,19 @@ public final class SystemPromptBuilder {
         - Always include example usage in comments for non-trivial procedures.
         
         ## Tool use
-        
+
         You have access to `lookup_lispkit_documentation`. \
         Use it proactively whenever you need:
         - Exact procedure signatures or argument types.
         - Information about a library you are not 100% certain about.
         - Examples from the official documentation.
-        
+
+        You also have access to `search_example_code`. \
+        Use it to find real-world LispKit Scheme example programs and libraries \
+        that demonstrate idiomatic patterns, algorithms, or library usage. \
+        This is especially helpful when the user asks for complete programs, \
+        coding patterns, or wants to see how a specific feature is used in practice.
+
         Never invent procedure signatures or library names — look them up.
         
         ## Response format

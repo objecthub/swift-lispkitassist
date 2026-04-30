@@ -28,6 +28,7 @@
 		CC7CCB0D2FA2ADA200C05C77 /* AssistantDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7CCAF62FA2ADA200C05C77 /* AssistantDelegate.swift */; };
 		CC7CCB0E2FA2ADA200C05C77 /* ConversationSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7CCAF82FA2ADA200C05C77 /* ConversationSession.swift */; };
 		CC7CCB112FA2ADD000C05C77 /* LispKitAssistTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7CCB0F2FA2ADD000C05C77 /* LispKitAssistTests.swift */; };
+		CC7CCB752FA2C3B000C05C77 /* ExampleCodeTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7CCB742FA2C3B000C05C77 /* ExampleCodeTool.swift */; };
 		CC80AA192FA0B91400859B31 /* LispKitAssist.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC80AA0D2FA0B91400859B31 /* LispKitAssist.framework */; };
 /* End PBXBuildFile section */
 
@@ -260,6 +261,7 @@
 		CC7CCB6F2FA2AE1400C05C77 /* SRFI-258.scm */ = {isa = PBXFileReference; lastKnownFileType = text; path = "SRFI-258.scm"; sourceTree = "<group>"; };
 		CC7CCB722FA2BBC100C05C77 /* CLAUDE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CLAUDE.md; sourceTree = "<group>"; };
 		CC7CCB732FA2BBD800C05C77 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		CC7CCB742FA2C3B000C05C77 /* ExampleCodeTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleCodeTool.swift; sourceTree = "<group>"; };
 		CC80AA0D2FA0B91400859B31 /* LispKitAssist.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LispKitAssist.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC80AA182FA0B91400859B31 /* LispKitAssistTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LispKitAssistTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -440,6 +442,7 @@
 			isa = PBXGroup;
 			children = (
 				CC7CCAFF2FA2ADA200C05C77 /* AssistantTool.swift */,
+				CC7CCB742FA2C3B000C05C77 /* ExampleCodeTool.swift */,
 				CC7CCB002FA2ADA200C05C77 /* DocumentationTool.swift */,
 				CC7CCB012FA2ADA200C05C77 /* ToolRegistry.swift */,
 			);
@@ -797,6 +800,7 @@
 				CC7CCB072FA2ADA200C05C77 /* DocumentationTool.swift in Sources */,
 				CC7CCB082FA2ADA200C05C77 /* Message.swift in Sources */,
 				CC7CCB092FA2ADA200C05C77 /* SystemPromptBuilder.swift in Sources */,
+				CC7CCB752FA2C3B000C05C77 /* ExampleCodeTool.swift in Sources */,
 				CC7CCB0A2FA2ADA200C05C77 /* ToolRegistry.swift in Sources */,
 				CC7CCB0B2FA2ADA200C05C77 /* StreamParser.swift in Sources */,
 				CC7CCB0C2FA2ADA200C05C77 /* AssistantEngine.swift in Sources */,

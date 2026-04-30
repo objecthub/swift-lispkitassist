@@ -43,9 +43,10 @@ Sources/
     Models/                     # APIModels, Message (domain types)
       APIModels.swift           # Anthropic wire-format Encodable/Decodable structs
       Message.swift             # Domain Message / ContentItem types
-    Tools/                      # AssistantTool protocol, ToolRegistry, DocumentationTool
+    Tools/                      # AssistantTool protocol, ToolRegistry, DocumentationTool, ExampleCodeTool
       AssistantTool.swift       # Protocol + ToolError enum every tool must implement
       DocumentationTool.swift   # Searches Resources/Documentation/ and returns ranked Markdown results
+      ExampleCodeTool.swift     # Searches Resources/Examples/ for .scm/.sld files and returns source code
       ToolRegistry.swift        # Immutable registry; dispatch to the right tool by name
   LispKitCLI/                   # CLI executable
     main.swift                  # Entry point
@@ -96,6 +97,7 @@ Resources/
 | `AssistantTool` (protocol) | Interface for registering executable tools |
 | `ToolRegistry` | Manages tool lifecycle and execution |
 | `DocumentationTool` | Token-based search over bundled LispKit docs |
+| `ExampleCodeTool` | Search example .scm/.sld programs and return source code |
 | `AssistantEngineDelegate` (protocol) | Callback interface for streaming events |
 | `CLIPresenter` | Terminal rendering, implements delegate |
 | `KeychainManager` | macOS Keychain CRUD for API credentials |

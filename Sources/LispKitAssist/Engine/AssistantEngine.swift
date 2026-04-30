@@ -29,7 +29,7 @@ import DynamicJSON
 ///
 /// **Separation of concerns**
 /// - All presentation callbacks go through `AssistantEngineDelegate`.
-/// - There is no `print` or UI code here — making it trivial to
+/// - There is no `print` or UI code here, making it trivial to
 ///   swap the CLI presenter for a SwiftUI `@Observable` view model.
 public final class AssistantEngine {
   
@@ -43,13 +43,13 @@ public final class AssistantEngine {
   private let systemPromptBuilder: SystemPromptBuilder
   
   public init(configuration: AnthropicConfiguration,
-              session: ConversationSession          = ConversationSession(),
-              toolRegistry: ToolRegistry            = ToolRegistry(),
+              session: ConversationSession = ConversationSession(),
+              toolRegistry: ToolRegistry = ToolRegistry(),
               systemPromptBuilder: SystemPromptBuilder = SystemPromptBuilder()) {
-    self.client               = AnthropicClient(configuration: configuration)
-    self.session              = session
-    self.toolRegistry         = toolRegistry
-    self.systemPromptBuilder  = systemPromptBuilder
+    self.client = AnthropicClient(configuration: configuration)
+    self.session = session
+    self.toolRegistry = toolRegistry
+    self.systemPromptBuilder = systemPromptBuilder
   }
   
   /// Send a user message and run the agentic loop until the model
@@ -97,11 +97,9 @@ public final class AssistantEngine {
   }
   
   private func streamOneTurn() async throws -> TurnResult {
-    let stream = client.streamMessages(
-      messages: session.apiMessages,
-      system:   systemPromptBuilder.build(),
-      tools:    toolRegistry.apiTools
-    )
+    let stream = client.streamMessages(messages: session.apiMessages,
+                                       system: systemPromptBuilder.build(),
+                                       tools: toolRegistry.apiTools)
     var textBuffer = ""
     var toolAccumulators: [Int: ToolCallAccumulator] = [:]
     var stopReason: String?
@@ -143,17 +141,17 @@ public final class AssistantEngine {
           toolName: call.name,
           input: call.parsedInput
         )
-        delegate?.engineDidFinishToolCall(
-          id: call.id, name: call.name,
-          result: output, isError: false
-        )
+        delegate?.engineDidFinishToolCall(id: call.id,
+                                          name: call.name,
+                                          result: output,
+                                          isError: false)
         results.append(.toolResult(toolUseId: call.id, content: output, isError: false))
       } catch {
         let errMsg = error.localizedDescription
-        delegate?.engineDidFinishToolCall(
-          id: call.id, name: call.name,
-          result: errMsg, isError: true
-        )
+        delegate?.engineDidFinishToolCall(id: call.id,
+                                          name: call.name,
+                                          result: errMsg,
+                                          isError: true)
         results.append(.toolResult(toolUseId: call.id, content: errMsg, isError: true))
       }
     }
@@ -168,10 +166,10 @@ struct ToolCallAccumulator {
   let name: String
   var inputJSON: String = ""
   
-  /// Attempt to decode the accumulated JSON; falls back to empty dict on failure.
+  /// Attempt to decode the accumulated JSON; falls back to empty dictionary on failure.
   var parsedInput: [String: JSON] {
     let raw = inputJSON.isEmpty ? "{}" : inputJSON
-    guard let data   = raw.data(using: .utf8),
+    guard let data = raw.data(using: .utf8),
           let parsed = try? JSONDecoder().decode([String: JSON].self, from: data) else {
       return [:]
     }

@@ -46,8 +46,8 @@ public final class CLIPresenter: AssistantEngineDelegate {
   private var responseStarted = false
   private var lastTokenWasNewline = false
   
-    /// Display the interactive prompt and return the trimmed user input.
-    /// Returns `nil` when EOF is reached (Ctrl-D).
+  /// Display the interactive prompt and return the trimmed user input.
+  /// Returns `nil` when EOF is reached (Ctrl-D).
   public func readUserInput() -> String? {
     print("\n\(ANSI.color(ANSI.bold + ANSI.cyan, "you")) \(ANSI.color(ANSI.dim, "›"))", terminator: " ")
     fflush(stdout)
@@ -101,7 +101,10 @@ public final class CLIPresenter: AssistantEngineDelegate {
   }
   
   public func engineDidStartToolCall(id: String, name: String) {
-    if !lastTokenWasNewline { print() }  // ensure we're on a new line
+    // Ensure we're on a new line
+    if !lastTokenWasNewline {
+      print()
+    }
     print(ANSI.color(ANSI.dim + ANSI.yellow, "  ⚙  calling tool: \(name) …"))
     fflush(stdout)
     // Re-print the assistant label for subsequent text
@@ -113,13 +116,17 @@ public final class CLIPresenter: AssistantEngineDelegate {
     // The result is fed back to the model silently; we just note completion
     let icon = isError ? "✗" : "✓"
     let colour = isError ? ANSI.red : ANSI.dim
-    if !lastTokenWasNewline { print() }
+    if !lastTokenWasNewline {
+      print()
+    }
     print(ANSI.color(colour, "  \(icon)  \(name) complete"))
     fflush(stdout)
   }
   
   public func engineDidFinishResponding(message: Message) {
-    if !lastTokenWasNewline { print() }
+    if !lastTokenWasNewline {
+      print()
+    }
     print(ANSI.color(ANSI.dim, "  ─────────────────────────────"))
   }
   
