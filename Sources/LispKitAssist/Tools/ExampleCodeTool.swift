@@ -155,8 +155,12 @@ public final class ExampleCodeTool: AssistantTool {
       }
       // Token-level match against full relative path tokens
       for qToken in queryTokens {
-        for fToken in file.searchTokens where fToken == qToken { score += 5 }
-        for fToken in file.searchTokens where fToken.hasPrefix(qToken) { score += 2 }
+        for fToken in file.searchTokens where fToken == qToken {
+          score += 5
+        }
+        for fToken in file.searchTokens where fToken.hasPrefix(qToken) {
+          score += 2
+        }
       }
       return score > 0 ? (file, score) : nil
     }

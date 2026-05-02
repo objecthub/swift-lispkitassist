@@ -40,13 +40,13 @@ public protocol AssistantTool: Sendable {
   
   /// Execute the tool with the validated input dictionary.
   /// Return a plain-text result string; errors should be thrown.
-  func execute(input: [String: JSON]) async throws -> String
+  func execute(input: [String : JSON]) async throws -> String
 }
 
 extension AssistantTool {
   /// Convert to the Anthropic API tool-definition format.
   var apiRepresentation: APITool {
-    APITool(name: name, description: description, inputSchema: inputSchema)
+    return APITool(name: name, description: description, inputSchema: inputSchema)
   }
 }
 

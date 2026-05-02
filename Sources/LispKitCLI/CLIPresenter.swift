@@ -45,6 +45,7 @@ private enum ANSI {
 public final class CLIPresenter: AssistantEngineDelegate {
   private var responseStarted = false
   private var lastTokenWasNewline = false
+  private var needsAssistantHeader = false
   
   /// Display the interactive prompt and return the trimmed user input.
   /// Returns `nil` when EOF is reached (Ctrl-D).
@@ -88,39 +89,41 @@ public final class CLIPresenter: AssistantEngineDelegate {
   public func engineDidStartResponding() {
     responseStarted = false
     lastTokenWasNewline = false
+    needsAssistantHeader = false
     print("\n\(ANSI.color(ANSI.bold + ANSI.magenta, "assistant")) \(ANSI.color(ANSI.dim, "›"))", terminator: " ")
     fflush(stdout)
   }
-  
+
   public func engineDidReceiveToken(_ token: String) {
-    // Print tokens as they arrive, no buffering
+    if needsAssistantHeader {
+      print("\(ANSI.color(ANSI.bold + ANSI.magenta, "assistant")) \(ANSI.color(ANSI.dim, "›"))", terminator: " ")
+      needsAssistantHeader = false
+    }
     print(token, terminator: "")
     fflush(stdout)
     responseStarted = true
     lastTokenWasNewline = token.hasSuffix("\n")
   }
-  
+
   public func engineDidStartToolCall(id: String, name: String) {
-    // Ensure we're on a new line
+    // A new tool call supersedes any pending header
+    needsAssistantHeader = false
     if !lastTokenWasNewline {
       print()
     }
     print(ANSI.color(ANSI.dim + ANSI.yellow, "  ⚙  calling tool: \(name) …"))
     fflush(stdout)
-    // Re-print the assistant label for subsequent text
-    print("\n\(ANSI.color(ANSI.bold + ANSI.magenta, "assistant")) \(ANSI.color(ANSI.dim, "›"))", terminator: " ")
-    fflush(stdout)
+    lastTokenWasNewline = true
   }
-  
+
   public func engineDidFinishToolCall(id: String, name: String, result: String, isError: Bool) {
-    // The result is fed back to the model silently; we just note completion
     let icon = isError ? "✗" : "✓"
     let colour = isError ? ANSI.red : ANSI.dim
-    if !lastTokenWasNewline {
-      print()
-    }
     print(ANSI.color(colour, "  \(icon)  \(name) complete"))
     fflush(stdout)
+    lastTokenWasNewline = true
+    // If the model continues with text after this tool result, show the header then
+    needsAssistantHeader = true
   }
   
   public func engineDidFinishResponding(message: Message) {
